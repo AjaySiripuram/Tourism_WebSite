@@ -34,6 +34,6 @@ menuBar.addEventListener('click', function() {
 for (let i = 0; i < items.length; i++) {
     items[i].addEventListener('click', () => {
         navUl.classList.toggle('dis-block');
-        fa.classList.toggle("fa-cross");
+        fa.classList.toggle("fa-xmark");
     });
 }
