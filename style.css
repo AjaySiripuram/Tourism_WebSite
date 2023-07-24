@@ -373,6 +373,7 @@ section {
 .packages .box-container .box .places img{
     object-fit: cover;
     height: 100%;
+    width: 100%;
     transition: transform .3s;
 }
 
@@ -382,7 +383,6 @@ section {
 
 @media screen and (max-width:768px) {
     .packages .box-container .box{
-        width: 30rem;
         display: flex;
         flex-direction:column;
         justify-content: center;
