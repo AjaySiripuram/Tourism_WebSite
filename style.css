@@ -344,6 +344,7 @@ section {
 .packages .box-container {
     display: flex;
     justify-content:center;
+    align-items: center;
     flex-wrap:wrap;
     /* width:65rem; */
     gap:2rem;
@@ -365,9 +366,9 @@ section {
     width: 23rem;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
     .packages .box-container .box {
-        width: 25rem;
+        width: min(25rem, 100%);
     }
 }
 
