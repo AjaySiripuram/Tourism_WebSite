@@ -44,10 +44,10 @@ p{
     align-items: center;
     padding: 0 5%;
     background: #333;
-    position: sticky !important;
+    position: sticky;
     top: 0;
     z-index: 10;
-    box-shadow: 0 5px 150px #999;
+    box-shadow: 0 5px 150px #3e3d3d;
 }
 
 .navbar1 strong{
@@ -55,14 +55,16 @@ p{
     font-size: 2.2rem;
 }
 
-.navbar1 a{
+.navbar1 .logo{
     color: #fff;
+    text-decoration: none;
 }
 
 .list-items {
     display: flex;
     height: 100%;
     align-items: center;
+    margin-top: 1rem;
 }
 
 .list-items li {
@@ -86,21 +88,27 @@ p{
     color: var(--orange);
 }
 
-@media screen and (max-width: 47rem) {
+
+@media only screen and (max-width: 47rem) {
     .menu {
         display: block;
     }
 
     .list-items {
-        display: none;
+        display: block;
         position: absolute;
+        visibility: hidden;
+        opacity: 0;
         top: 5rem;
         width: 100%;
         left: 0;
+        margin-top: 0;
+        transition: visibility 0.3s, opacity 0.3s;
     }
 
     .dis-block{
-        display: block;
+        visibility: visible;
+        opacity: 1;
     }
 
     .list-items li {
@@ -213,6 +221,10 @@ section {
 
 .book{
     padding-top: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .heading {
@@ -249,6 +261,7 @@ section {
     flex-wrap: wrap;
     align-items: center;
     gap: 1.5rem;
+    width: 100%;
 }
 
 @media screen and (max-width:992px) {
@@ -257,27 +270,30 @@ section {
         justify-content: center;
         flex-wrap: nowrap;
         display: block;
-        padding-left: 2rem;
     }
 }
 
 .book .row .image {
-    flex: 1 1 40rem;
+    width: 100%;
+    height: 35rem;
 }
 
 .book .row .image img {
     width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+    object-fit: cover;
 }
 
 @media screen and (max-width:992px) {
-    .book .row .image img{
-        width: 95%;
+    .book .row .image{
         margin-bottom: 15px;
     }
 }
 
 .book .row form {
-    /* flex: 1 1 40rem; */
+    height: 35rem;
+    width: 100%;
     padding: 2rem;
     box-shadow: 0 1rem 2rem rgba(0,0,0,.3);
     border-radius: .5rem;
@@ -286,7 +302,7 @@ section {
 @media screen and (max-width:768px) {
     .book .row form{
         order: 2;
-        width: auto;
+        height: 35rem;
     }
 }
 
@@ -616,8 +632,11 @@ section {
 .review .box{
     padding: 2rem;
     text-align: center;
-    box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
     transition: 1s;
+}
+
+.swiper{
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
     border-radius: 5rem;
 }
 
@@ -667,14 +686,29 @@ section {
 
 .contact{
     padding-top: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .contact .row {
-    display: flex;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
     flex-wrap: wrap;
     align-items: center;
     gap: 1.5rem;
+    width: 100%;
     padding: 1rem;
+}
+
+@media screen and (max-width: 992px){
+    .contact .row{
+        justify-content: center;
+        flex-wrap: nowrap;
+        display: block;
+        flex-direction: column;
+    }
 }
 
 .contact .row:hover{
@@ -683,18 +717,27 @@ section {
 }
 
 .contact .row .image {
-    flex: 1 1 35rem;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width:992px){
+    .contact .row .image{
+        margin-bottom: 15px;
+    }
 }
 
 .contact .row .image img{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .contact .row form{
     /* height: 34rem; */
     padding: 2rem;
-    box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
     border-radius: .5rem;
+    transition: all 0.5s;
 }
 
 .contact .row .form:hover{
