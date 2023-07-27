@@ -255,6 +255,7 @@ section {
 @media screen and (max-width:576px) {
     .heading span {
         font-size:10px;
+        padding: 2px 4px;
     }
 }
 
