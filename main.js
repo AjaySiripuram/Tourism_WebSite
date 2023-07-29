@@ -37,3 +37,10 @@ for (let i = 0; i < items.length; i++) {
         fa.classList.toggle("fa-xmark");
     });
 }
+
+
+//nav bar background color changing while scroll down
+const navbar = document.querySelector(".navbar1");
+window.addEventListener('scroll', () => {
+    navbar.classList.toggle('nav-after', window.scrollY > 100);
+})
