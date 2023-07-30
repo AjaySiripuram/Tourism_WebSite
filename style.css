@@ -449,7 +449,6 @@ section {
     justify-content:center;
     align-items: center;
     flex-wrap:wrap;
-    /* width:65rem; */
     gap:2rem;
 }
 
@@ -482,18 +481,11 @@ section {
     border-radius: 0.5rem;
 }
 
-/* 
-.packages .box-container .box img{
-    height:25rem;
-    width:100%;
-    border-radius:10px;
-} */
-
 .packages .box-container .box .places img{
     object-fit: cover;
     height: 100%;
     width: 100%;
-    transition: transform .3s;
+    transition: transform .5s;
 }
 
 .packages .box-container .box .places img:hover{
