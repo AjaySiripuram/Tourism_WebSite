@@ -206,6 +206,7 @@ section {
 
 .home .home-button{
     border-radius: 4px;
+    text-transform: uppercase;
     padding: .4rem 1.1rem;
     letter-spacing: .2rem;
     color: #fff;
