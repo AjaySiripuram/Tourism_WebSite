@@ -65,6 +65,7 @@ p{
     color: #fff;
     text-decoration: none;
     transition: all 0.3s ease;
+    font-weight: 500;
 }
 
 .nav-after .logo{
@@ -87,7 +88,9 @@ p{
     color: #fff;
     padding: 1rem;
     transition: color .3s ease;
-    font-size: .88rem;
+    font-size: .75rem;
+    text-transform: uppercase;
+    font-weight: 500;
 }
 
 .nav-after .list-items li a{
@@ -100,7 +103,6 @@ p{
 
 .list-items li .actived{
     color: var(--orange);
-    font-weight: 500;
 }
 
 .list-items li a:hover{
@@ -158,9 +160,7 @@ p {
     src: url("de-vele.otf");
 }
 
-section {
-    padding-top: 20rem;
-}
+
 .home {
     min-height: 100vh;
     display: flex;
@@ -261,7 +261,13 @@ section {
 
 
 section {
-    padding: 1.5rem 9%;
+    padding: 6rem 9%;
+}
+
+@media screen and (max-width: 767px) {
+    section{
+        padding: 3rem 9%;
+    }
 }
 
 .button {
@@ -296,7 +302,6 @@ section {
 /* Book section */
 
 .book{
-    padding-top: 6rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -439,10 +444,6 @@ section {
 
 /* Packages Section */
 
-.packages{
-    padding-top: 6rem;
-}
-
 .packages .box-container {
     display: flex;
     justify-content:center;
@@ -565,10 +566,6 @@ section {
 
 /* Services Section */
 
-.service{
-    padding-top: 6rem;
-}
-
 .service .box-container{
     display: flex;
     flex-wrap: wrap;
@@ -624,10 +621,6 @@ section {
 }
 
 /* Gallery Section */
-
-.gallery{
-    padding-top: 6rem;
-}
 
 .gallery .box-container{
     display: flex;
@@ -707,10 +700,6 @@ section {
 
 /* Review Section */
 
-.review{
-    padding-top: 6rem;
-}
-
 .review .review-slider{
     padding-bottom: 2rem;
 }
@@ -776,7 +765,6 @@ section {
 /* Contact Section */
 
 .contact{
-    padding-top: 6rem;
     display: flex;
     align-items: center;
     justify-content: center;
