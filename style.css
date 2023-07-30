@@ -864,7 +864,7 @@ section {
 /* Footer Section */
 
 .footer {
-    background: #333;
+    background: #000;
 }
 
 .footer .box-container{
@@ -919,12 +919,12 @@ section {
 }
 
 .footer .credit {
-    font-size: 1rem;
+    font-size: .8rem;
     text-align: center;
     padding: 2rem 1rem;
     margin-top: 1rem;
     color: #fff;
-    border-top: .1rem solid rgba(161, 156, 146, 0.2);
+    border-top: 1px solid rgba(206, 203, 203, 0.6);
 }
 
 @media screen and (max-width:768px){
@@ -933,6 +933,7 @@ section {
     }
 }
 
-.footer .credit span{
+.footer .credit a{
     color: var(--orange);
+    text-decoration: underline;
 }
