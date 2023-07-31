@@ -207,7 +207,7 @@ p {
 .home .home-button{
     border-radius: 4px;
     text-transform: uppercase;
-    padding: .4rem 1.1rem;
+    padding: 0 1.1rem;
     letter-spacing: .2rem;
     color: #fff;
     background-color: var(--orange);
@@ -216,6 +216,7 @@ p {
     transition: transform 0.5s;
     font-size: .8rem;
     font-weight: 400;
+    height: 2rem;
 }
 
 .home .home-button:hover{
