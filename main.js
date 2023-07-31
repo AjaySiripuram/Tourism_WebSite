@@ -44,3 +44,18 @@ const navbar = document.querySelector(".navbar1");
 window.addEventListener('scroll', () => {
     navbar.classList.toggle('nav-after', window.scrollY > 100);
 })
+
+
+//navbar discover more name changing
+
+// const myArray = ["amazing", "places", "discover"];
+// let i = 0;
+
+// setInterval(() => {
+//     if (i > 2){
+//         i = 0;
+//     }
+//     const homeButton = document.querySelector(".home-button");
+//     homeButton.textContent = myArray[i];
+//     i += 1;
+// }, 1500);
