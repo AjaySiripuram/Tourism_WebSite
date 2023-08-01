@@ -46,7 +46,7 @@ window.addEventListener('scroll', () => {
 })
 
 
-//navbar discover more name changing
+// navbar discover more name changing
 
 // const myArray = ["amazing", "places", "discover"];
 // let i = 0;
