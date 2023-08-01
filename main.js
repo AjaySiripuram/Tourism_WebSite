@@ -48,14 +48,44 @@ window.addEventListener('scroll', () => {
 
 // navbar discover more name changing
 
-// const myArray = ["amazing", "places", "discover"];
-// let i = 0;
+const myTexts = ["amazing", "places", "discover"];
+let homeButton = document.querySelector('.home-button');
 
-// setInterval(() => {
-//     if (i > 2){
-//         i = 0;
-//     }
-//     const homeButton = document.querySelector(".home-button");
-//     homeButton.textContent = myArray[i];
-//     i += 1;
-// }, 1500);
+function typeText(text) {
+    homeButton.textContent = "";
+    let i = 0;
+    const typingInterval = setInterval(function() {
+      homeButton.textContent += text[i];
+      i++;
+      if (i === text.length) {
+        clearInterval(typingInterval);
+      }
+    }, 100);
+  }
+  
+  function execute(){
+      let j= 0;
+      setInterval(()=>{
+          if (j > 2){
+              j = 0;
+          }
+          typeText(myTexts[j]);
+          j++;
+      }, 1500);
+  }
+  
+  execute();
+
+
+//smooth section loading
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting){
+            entry.target.classList.add("show");
+        }
+    });
+});
+
+const hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach((element) => observer.observe(element));
