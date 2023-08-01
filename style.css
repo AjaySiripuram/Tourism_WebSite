@@ -946,6 +946,7 @@ section {
 .hidden{
     opacity: 0;
     filter: blur(5px);
+    /* rotate: -30deg; */
     transform: translateY(30%);
     transition: all 1s;
 }
@@ -953,27 +954,28 @@ section {
 .show{
     opacity: 1;
     filter: blur(0);
-    transform: translateX(0);
+    /* rotate: 0deg; */
+    transform: translateY(0);
 }
 
 .box-container .box:nth-child(2){
-    transition-delay: 100ms;
+    transition-delay: 80ms;
 }
 .box-container .box:nth-child(3){
-    transition-delay: 200ms;
+    transition-delay: 160ms;
 }
 .box-container .box:nth-child(4){
-    transition-delay: 300ms;
+    transition-delay: 240ms;
 }
 .box-container .box:nth-child(5){
-    transition-delay: 400ms;
+    transition-delay: 320ms;
 }
 .box-container .box:nth-child(6){
-    transition-delay: 500ms;
+    transition-delay: 400ms;
 }
 
 @media screen and(max-width:768px){
-    *{
-        transition-delay: 0ms !important;
+    .box-container .box{
+        transition-delay: 0;
     }
 }
