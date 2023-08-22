@@ -440,6 +440,40 @@ section {
     }
 }
 
+.confirmation {
+    width: 400px;
+    background-color: #fff;
+    border-radius: 13px;
+    padding: 15px;
+    position: absolut;
+    display: none;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.confirmation:hover {
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.3);
+    transition: 1s; 
+}
+
+@media screen and (max-width:768px) {
+    .confirmation h1{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .confirmation p{
+        font-size: .8rem;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .confirmation a{
+        font-size: .8rem;
+    }
+}
+
 /* Packages Section */
 
 .packages .box-container {

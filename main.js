@@ -89,3 +89,23 @@ const observer = new IntersectionObserver((entries) => {
 
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((element) => observer.observe(element));
+
+// booking form conformation message
+
+function confirmBooking() {
+    document.getElementById('bookingForm').style.display = 'none';
+    document.getElementById('bookingImage').style.display = 'none';
+    document.getElementById('confirmation').style.display = 'block';
+    return false;
+  }
+
+  function nextBooking() {
+    document.getElementById('bookingForm').style.display = 'block';
+    document.getElementById('bookingImage').style.display = 'block';
+    document.getElementById('confirmation').style.display = 'none';
+    document.getElementById('place').value = "";
+    document.getElementById('people').value = "";
+    document.getElementById('arrivalDate').value = "";
+    document.getElementById('leavingDate').value = "";
+    return false;
+  }

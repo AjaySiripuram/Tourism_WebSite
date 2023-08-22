@@ -68,29 +68,34 @@
     <span>w</span>
   </h1>
 
-  <div class="row">
-    <div class="image hidden">
+  <div class="row" id="bookingPage">
+    <div class="image hidden" id="bookingImage">
       <img src="https://images.pexels.com/photos/417059/pexels-photo-417059.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" loading="lazy" alt="">
     </div>
-    <form action="" class="hidden">
+    <form class="hidden" id="bookingForm" onsubmit="return confirmBooking()">
       <div class="inputbox">
         <h1>Where to </h1>
-        <input type="text" placeholder="place name">
+        <input id="place" type="text" placeholder="place name" required>
       </div>
       <div class="inputbox">
         <h1>How many </h1>
-        <input type="number" placeholder="number of guests">
+        <input id="people" type="number" placeholder="number of guests" name="number" required>
       </div>
       <div class="inputbox">
         <h1>Arrivals </h1>
-        <input type="date">
+        <input id="arrivalDate" type="date" required>
       </div>
       <div class="inputbox">
         <h1>Leaving </h1>
-        <input type="date">
+        <input id="leavingDate" type="date" required>
       </div>
       <input type="submit" class="button" value="book now">
     </form>
+  </div>
+  <div class="confirmation" id="confirmation">
+    <h1>Booking Confirmed!</h1>
+    <p>Thank you for booking with us. We look forward to seeing you on your selected date and time.</p>
+    <a onclick="return nextBooking()" class="button"> Next booking </a> 
   </div>
 </section>
 
